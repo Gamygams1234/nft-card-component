@@ -1,0 +1,159 @@
+// Primary
+$softBlue: rgb(139, 172, 218);
+$cyan: rgb(0, 255, 247);
+
+// neutral
+
+$mainBG: hsl(217, 54%, 11%);
+$cardBG: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+hr{
+    border: 1px solid $line;
+    color: $line;
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-600 {
+  font-weight: 600;
+}
+
+.content {
+  min-height: calc(100vh - 3rem);
+  background-color: $mainBG;
+
+  // center the image
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem ;
+
+  .card {
+    padding: 1.5rem;
+    background-color: $cardBG;
+    width: 100%;
+    max-width: 540px;
+    border-radius: .5rem;
+    .image{
+        position: relative;
+        width: 100%;
+        border-radius: .5rem;
+        padding-bottom: 100% ;
+        background: url(../images/image-equilibrium.jpg);
+        background-size:cover; 
+        background-repeat: no-repeat;
+        background-position: center center;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        img{
+            position: absolute;
+            left: calc(50% - 24px);
+            top: calc(50% - 24px);
+            opacity: 0;
+        }
+        
+
+    }
+    .image:hover{
+        background:linear-gradient(0deg, rgba(0, 255, 247, 0.3), rgba(0, 255, 247,0.3)), url(../images/image-equilibrium.jpg);
+        background-size:cover; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        img{
+            opacity: 1;
+        }
+
+    }
+    .card-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        h1{
+            margin-bottom: 1.5rem;
+            color: $white;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+            display: inline-block;
+            font-size: 1.5rem;
+
+        }
+        h1:hover{
+            color: $cyan;
+      
+        }
+        p{
+            color:$softBlue;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        
+        }
+        .card-details{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            .detail{
+                display: flex;
+                align-items: center;
+                p{
+                    margin-bottom: 0;
+
+                }
+                img{
+                    margin-right: 1em;
+                }
+            
+            }
+            .left p{
+                color: $cyan;
+            }
+            .right p{
+                color: $softBlue;
+            }
+        }
+    }
+
+  }
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img{
+        height: 50px;
+        width: auto;
+        border-radius: 25px;
+        border: 1px solid $white;
+        margin-right: 1rem;
+    }
+    .profile-desc{
+        margin-bottom: 0px !important;
+    }
+    span{
+        color: $white;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+    }
+    span:hover{
+    color: $cyan;
+    }
+}
